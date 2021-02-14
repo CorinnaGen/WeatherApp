@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Homework5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bd8761b15a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/finalproject.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="heading">
+        Bari
+        <i class="fas fa-sun"></i>
+      </h1>
+      <ul>
+        <li>
+          <span id="temp"> 8 </span>
+          <a href="#" id="cLink">ºC </a>
+          |
+          <a href="#" id="fahLink">ºF</a>
+        </li>
+        <li id="humidity">Humidity 20%</li>
+
+        <li>
+          <form id="choose-form">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Search city"
+              autocomplete="off"
+              autofocus="on"
+            />
+            <input type="submit" id="submit-button" value="Search" />
+            <input type="submit" id="current-button" value="Current position" />
+          </form>
+        </li>
+      </ul>
+      <h2 id="current-time">24 Sun Jan 2040</h2>
+      <hr />
+      <p id="weather-per-hours">Per hours:</p>
+      <div class="row">
+        <div class="col-3">
+          8 am
+          <br />
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="col-3">
+          12 pm
+          <br />
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col-3">
+          4 pm
+          <br />
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col-3">
+          12 am
+          <br />
+          <i class="fas fa-cloud-moon"></i>
+        </div>
+      </div>
+      <h3 id="weather-tomorrow">Tomorrow: 14º <i class="fas fa-sun"></i></h3>
+      <hr />
+      <p id="weather-this-week">This week:</p>
+      <ul>
+        <div class="row">
+          <div class="col-5">
+            Monday
+            <br />
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="col-5">
+            Tuesday
+            <br />
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="col-5">
+            Wedsnday
+            <br />
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <div class="col-5">
+            Thursday
+            <br />
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="col-5">
+            Friday
+            <br />
+            <i class="fas fa-sun"></i>
+          </div>
+          <div class="col-5">
+            Saturday
+            <br />
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="col-5">
+            Sunday
+            <br />
+            <i class="fas fa-cloud-rain"></i>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+    <script src="src/finalproject.js"></script>
+  </body>
+</html>

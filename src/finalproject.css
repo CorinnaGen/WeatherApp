@@ -1,0 +1,90 @@
+body {
+  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+}
+
+h1,
+ul,
+span,
+h2,
+p,
+h3,
+div,
+form {
+  font-family: "Varela Round", sans-serif;
+  position: relative;
+}
+
+h1 {
+  color: #16697a;
+  text-align: left;
+  margin: auto 0;
+  padding-top: 40px;
+}
+
+span {
+  color: #16697a;
+  text-align: left;
+  margin: auto 0;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: block;
+  margin: auto 0;
+}
+h2 {
+  color: #db6400;
+  text-align: left;
+  margin: auto 0;
+  top: 10px;
+  bottom: 20px;
+  font-size: 15px;
+}
+p {
+  color: #ffa62b;
+  text-align: left;
+  margin: auto 0;
+  padding-top: 50px;
+  bottom: 20px;
+}
+
+h3 {
+  color: #db6400;
+  text-align: left;
+  margin: auto 0;
+  top: 40px;
+  bottom: 20px;
+}
+
+div {
+  color: #16697a;
+}
+
+div.col-1 {
+  margin: auto 0;
+  padding: 20px, 10px;
+  text-align: center;
+}
+
+hr {
+  position: relative;
+  top: 40px;
+  bottom: 10px;
+}
+
+form {
+  position: relative;
+  top: 10px;
+}
+
+.row {
+  font-family: "Varela Round", sans-serif;
+}
+
+.form-select {
+  color: #ffa62b;
+}
