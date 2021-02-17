@@ -49,8 +49,12 @@ function showTemperature(response) {
   let city = response.data.name;
   let currentCity = document.querySelector("#city-input");
   currentCity.innerHTML = city;
+  let description = document.querySelector("#description");
+  description.innerHTML= `${response.data.weather.description}`;
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.main.humidity}%`;
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = `${response.data.main.wind.speed}`;
 }
 
 function currentLocation(event) {
