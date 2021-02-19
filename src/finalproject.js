@@ -54,7 +54,7 @@ function showTemperature(response) {
   humidity.innerHTML = `${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
-  let iconElement = document.querySelector("main-icon");
+  let iconElement = document.querySelector("#main-icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
 }
 
