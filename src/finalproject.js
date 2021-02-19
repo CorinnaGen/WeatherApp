@@ -55,7 +55,7 @@ function showTemperature(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
   let iconElement = document.querySelector("#main-icon");
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function currentLocation(event) {
