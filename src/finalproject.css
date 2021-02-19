@@ -22,6 +22,7 @@ h1 {
 }
 
 span {
+  text-transform: capitalize;
   color: #16697a;
   text-align: left;
   margin: auto 0;
