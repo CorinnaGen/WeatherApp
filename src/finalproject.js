@@ -5,7 +5,7 @@ let year = currentTime.getFullYear();
 let hours = currentTime.getHours();
 let minutes = currentTime.getMinutes();
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fry", "Sat"];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[currentTime.getDay()];
 
 let months = [
@@ -53,7 +53,9 @@ function showTemperature(response) {
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
-  wind.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
+  let iconElement = document.querySelector("main-icon");
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/10d@2x.png`);
 }
 
 function currentLocation(event) {
