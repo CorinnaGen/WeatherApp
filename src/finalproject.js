@@ -49,17 +49,17 @@ function displayForecast(response){
         <div class="col-3">
           12 pm
           <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[1].icon}@2x.png"/>
+          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
         </div>
         <div class="col-3">
           4 pm
           <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[2].icon}@2x.png"/>
+          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
         </div>
         <div class="col-3">
           12 am
           <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[3].icon}@2x.png"/>
+          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
         </div>`
   
 
