@@ -41,7 +41,7 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
-showCity("Barcelona");
+searchCity("Barcelona");
 
 function showTemperature(response) {
   console.log(response.data);
@@ -77,8 +77,9 @@ currentButton.addEventListener("click", currentLocation);
 
 function convertToF(event, response) {
   event.preventDefault();
+  let fahrenheitTemp = (14*9)/5+32;
   let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}ºC`;
+  temperatureElement.innerHTML = fahrenheitTemp;
 }
 
 function convertToC(event, response) {
