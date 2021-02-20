@@ -26,6 +26,10 @@ let month = months[currentTime.getMonth()];
 
 h2.innerHTML = `Today is ${day}, ${month}, ${date}, ${year}, ${hours}:${minutes}`;
 
+function formatHours(timestamp){
+  
+}
+
 function showCity(event) {
   event.preventDefault();
   let cityForm = document.querySelector("#city-input");
@@ -37,7 +41,38 @@ let form = document.querySelector("#choose-form");
 form.addEventListener("submit", showCity);
 
 function displayForecast(response){
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (let index=0; index<3; index++){
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
   
+   <p id="forecast">Per hours:
+      <div class="row">
+        <div class="col-3">
+          ${formatHours(forecast.dt * 1000)}
+          <br />
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="col-3">
+          12 pm
+          <br />
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col-3">
+          4 pm
+          <br />
+          <i class="fas fa-cloud-sun"></i>
+        </div>
+        <div class="col-3">
+          12 am
+          <br />
+          <i class="fas fa-cloud-moon"></i>
+        </div>
+      </div></p>`;}
+
 }
 
 function searchCity(city) {
