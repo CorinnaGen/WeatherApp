@@ -41,8 +41,7 @@ form.addEventListener("submit", showCity);
 function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
-  forecastElement.innerHTML = <div id="forecast" class="row">
-        <div class="col-3">
+  forecastElement.innerHTML = `<div class="col-3">
           8 am
           <br />
           <img src=""/>
@@ -61,8 +60,7 @@ function displayForecast(response){
           12 am
           <br />
           <img src=""/>
-        </div>
-      </div>
+        </div>`
   
 
 }
