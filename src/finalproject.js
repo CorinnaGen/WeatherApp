@@ -86,7 +86,7 @@ function convertToF(event, response) {
 function convertToC(event, response) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}ºC`;
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 
 function convertTempC(response) {
