@@ -50,7 +50,7 @@ function displayForecast(response){
         <div class="col-3">
           12 pm
           <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`"/>
+          <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
         </div>
         <div class="col-3">
           4 pm
