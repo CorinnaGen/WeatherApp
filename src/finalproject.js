@@ -45,6 +45,7 @@ function displayForecast(response){
           8 am
           <br />
           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+          <strong>${Math.round(forecast.main.temp_max)}º</strong>${Math.round(forecast.main.temp_min)}º
         </div>
         <div class="col-3">
           12 pm
