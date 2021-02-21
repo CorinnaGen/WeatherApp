@@ -63,7 +63,8 @@ function displayForecast(response){
         </div>`
   }
 
-  
+  let tomorrowTemp = document.querySelector("weather-tomorrow");
+  tomorrowTemp.innerHTML= `${Math.round(forecast.main.temp)}`
 
 }
 
@@ -91,7 +92,8 @@ function showTemperature(response) {
   let iconElement = document.querySelector("#main-icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   celsiusTemp = Math.round(response.data.main.temp);
-}
+  }
+
 
 function currentLocation(event) {
   navigator.geolocation.getCurrentPosition(currentLocation);
