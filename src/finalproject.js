@@ -64,7 +64,7 @@ function displayForecast(response){
   }
 
   let tomorrowTemp = document.querySelector("weather-tomorrow");
-  tomorrowTemp.innerHTML= `${Math.round(forecast.main.temp)}`
+  tomorrowTemp.innerHTML= `${Math.round()}`
 
 }
 
