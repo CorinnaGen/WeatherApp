@@ -51,7 +51,9 @@ form.addEventListener("submit", showCity);
 
 function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+  let forecast = null;
+  for(let index=0; index < 6; index++){
+    forecast = response.data.list[index];
   forecastElement.innerHTML = `<div class="col-3">
           ${formatHours(forecast.dt * 1000)} h
           <br />
@@ -64,7 +66,7 @@ function displayForecast(response){
           <br />
           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/><br>
           <strong>${Math.round(forecast.main.temp_max)}º</strong>||${Math.round(forecast.main.temp_min)}º
-        </div>`
+        </div>`}
 
   
 
