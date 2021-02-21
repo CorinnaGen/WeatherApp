@@ -98,8 +98,7 @@ function showTemperature(response) {
 function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
-  let h1 = document.querySelector("#heading");
-  h1.innerHTML = `${searchLocation.value}`;
+ 
 }
 
 function searchLocation(position) {
