@@ -140,3 +140,5 @@ let fahLink = document.querySelector("#fahLink");
 let celsiusLink = document.querySelector("#cLink");
 fahLink.addEventListener("click", convertToF);
 celsiusLink.addEventListener("click", convertToC);
+
+searchCity(Bari);
