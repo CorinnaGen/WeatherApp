@@ -53,7 +53,7 @@ function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   forecastElement.innerHTML = `<div class="col-3">
-          ${forecast.dt * 1000}
+          ${formatHours(forecast.dt * 1000)}
           <br />
           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
           <strong>${Math.round(forecast.main.temp_max)}º</strong>${Math.round(forecast.main.temp_min)}º
