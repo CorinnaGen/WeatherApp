@@ -96,7 +96,8 @@ function showTemperature(response) {
 
 
 function currentLocation(event) {
-  navigator.geolocation.getCurrentPosition(currentLocation);
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
 function searchLocation(position) {
@@ -143,4 +144,4 @@ let celsiusLink = document.querySelector("#cLink");
 fahLink.addEventListener("click", convertToF);
 celsiusLink.addEventListener("click", convertToC);
 
-searchCity(Bari);
+searchCity("Bari");
