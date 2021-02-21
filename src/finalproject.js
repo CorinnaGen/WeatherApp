@@ -1,4 +1,4 @@
-let currentTime = new Date();
+let currentTime = new Date(timestamp);
 let h2 = document.querySelector("#current-time");
 let date = currentTime.getDate();
 let year = currentTime.getFullYear();
@@ -26,6 +26,17 @@ let month = months[currentTime.getMonth()];
 
 h2.innerHTML = `Today is ${day}, ${month}, ${date}, ${year}, ${hours}:${minutes}`;
 
+function formatHours(timestamp){
+  let currentTime = new Date(timestamp);
+  let hours = currentTime.getHours();
+  if(hours< 10){hours = `0${hours}`;}
+let minutes = currentTime.getMinutes();
+if (minutes <10){
+  minutes =`0${minutes}`;
+}
+  return `${houts}:${minutes}`
+
+}
 
 
 function showCity(event) {
@@ -42,25 +53,10 @@ function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
   forecastElement.innerHTML = `<div class="col-3">
-          8 am
+          ${forecast.dt * 1000}
           <br />
           <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
           <strong>${Math.round(forecast.main.temp_max)}º</strong>${Math.round(forecast.main.temp_min)}º
-        </div>
-        <div class="col-3">
-          12 pm
-          <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[1].icon}@2x.png"/>
-        </div>
-        <div class="col-3">
-          4 pm
-          <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[2].icon}@2x.png"/>
-        </div>
-        <div class="col-3">
-          12 am
-          <br />
-          <img src="http://openweathermap.org/img/wn/${forecast.weather[3].icon}@2x.png"/>
         </div>`
   
 
