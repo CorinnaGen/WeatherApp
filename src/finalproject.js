@@ -1,4 +1,4 @@
-let currentTime = new Date(timestamp);
+let currentTime = new Date();
 let h2 = document.querySelector("#current-time");
 let date = currentTime.getDate();
 let year = currentTime.getFullYear();
