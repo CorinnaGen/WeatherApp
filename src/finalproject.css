@@ -1,6 +1,9 @@
 body {
   background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
+.weather-app{ max-width: 600px;
+
+}
 
 h1,
 ul,
