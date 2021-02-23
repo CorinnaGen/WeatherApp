@@ -2,6 +2,10 @@ body {
   background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
 }
 .weather-app{ max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #16697a;
+  border-radius: 5px;
 
 }
 
