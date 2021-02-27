@@ -81,7 +81,7 @@ function showTemperature(response) {
   console.log(response.data);
   let temperature = document.querySelector("#temp");
   temperature.innerHTML = `${Math.round(response.data.main.temp)}ºC`;
-  let currentCity = document.querySelector("#city-input");
+  let currentCity = document.querySelector("#heading");
   currentCity.innerHTML = response.data.name;
   let description = document.querySelector("#description");
   description.innerHTML= `${response.data.weather[0].description}`;
