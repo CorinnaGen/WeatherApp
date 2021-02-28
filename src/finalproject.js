@@ -112,7 +112,7 @@ function searchLocation(position) {
    
   
  
-}
+
 
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", currentLocation);
