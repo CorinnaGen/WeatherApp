@@ -63,10 +63,8 @@ function displayForecast(response){
         </div>`
   }
 
-  let tomorrowTemp = document.querySelector("weather-tomorrow");
-  tomorrowTemp.innerHTML= `${Math.round()}`
-
 }
+
 
 function searchCity(city) {
   let apiKey = "94128e0a800f0999e0bbd83894a5cfd3";
