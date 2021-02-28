@@ -96,9 +96,8 @@ function showTemperature(response) {
 function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
-  let apiKey = "94128e0a800f0999e0bbd83894a5cfd3";
-  let  apiUrl= `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+ 
+
    
  
 }
@@ -110,6 +109,8 @@ function searchLocation(position) {
   let apiKey = "94128e0a800f0999e0bbd83894a5cfd3";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemperature);
+    let  apiUrl= `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
   
  
 }
