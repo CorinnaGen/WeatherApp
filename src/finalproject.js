@@ -5,7 +5,7 @@ let year = currentTime.getFullYear();
 let hours = currentTime.getHours();
 let minutes = currentTime.getMinutes();
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let days = ["Sunday", "Monday", "Tuesday", "Wednsday", "Thursday", "Friday", "Saturday"];
 let day = days[currentTime.getDay()];
 
 let months = [

@@ -1,11 +1,13 @@
-
+.body{
+  display:flex;
+}
 
 .weather-app{ max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   border: 2px solid #16697a;
   border-radius: 5px;
-  background-image: linear-gradient(to right, #e4afcb 0%, #b8cbb8 0%, #b8cbb8 0%, #e2c58b 30%, #c2ce9c 64%, #7edbdc 100%);
+  background-image: linear-gradient( #082032, #334756);
 
 }
 
@@ -41,7 +43,7 @@ ul {
 }
 
 li {
-  display: block;
+  display: flex;
   margin: auto 0;
 }
 h2 {
@@ -95,4 +97,27 @@ form {
 
 .form-select {
   color: #ffa62b;
+}
+
+.submit{
+  background-color:#334756 ;
+  color:#db6400;
+  border-radius: 5px;
+  box-shadow: #16697a;
+}
+.submit:hover{
+  background-color: #db6400;
+  color:#334756;
+}
+
+.current{
+background-color:#334756 ;
+  color:#db6400;
+  border-radius: 5px;
+  box-shadow: #16697a;
+}
+
+.current:hover{
+  background-color: #db6400;
+  color:#334756;
 }
