@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Weather App</title>
+    <title>Weather</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,24 +24,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-      <h1>
-        <span id="heading"></span>
-        <img id = "main-icon" src=""/>
-        <span id="description"></span>
-      </h1>
-      <ul>
-        <li>
-          <span id="temp">  </span>
-          <a href="#" id="cLink">ºC </a>
-          |
-          <a href="#" id="fahLink">ºF</a>
-        </li>
-        <li> Humidity: <span id="humidity"> </span></li>
-        <li>Wind: <span id="wind"> </span></li>
 
-        <li>
-          <form id="choose-form">
+      <div class="search-form">
+         <form id="choose-form">
             <input
               type="text"
               id="city-input"
@@ -52,19 +37,48 @@
             <input type="submit" id="submit-button" value="Search" class="submit" />
             <input type="submit" id="current-button" value="Current position" class="current" />
           </form>
+      </div>
+    
+      
+    <!--Query results-->
+     
+    <div class="today-weather">
+      <img id = "main-icon" src=""/>
+      <span id="heading">
+      <h1></h1>
+      </span>
+      
+    </div>
+    <div class="current-weather">
+      <span id="description"><h2></h2></span> 
+      <ul>
+        <li>
+          <span id="temp">  </span>
+          <a href="#" id="cLink">ºC </a>
+          |
+          <a href="#" id="fahLink">ºF</a>
         </li>
-      </ul>
-      <h2 id="current-time">24 Sun Jan 2040</h2>
+        <li> Humidity: <span id="humidity"> </span></li>
+        <li>Wind: <span id="wind"> </span></li>
+        </ul>
+      </div>
+    
+    <h2 id="current-time">24 Sun Jan 2040</h2>
       <hr />
-      <p>Per hours:<div class="row" id="forecast">
+      <h5>Per hours:</h5>
+      <div class="row" id="forecast">
         
       </div>
-      </p>
-      
-      <small>
-    <a href="https://github.com/CorinnaGen/WeatherApp">I appreciate advice and suggestions </a></small>
-    </div>
+      <div class="row" id="weekly-forecast">
 
+      </div>
+    
+      
+      <footer>
+    <a href="https://github.com/CorinnaGen/WeatherApp">I appreciate advice and suggestions </a>
+    </footer>
+    
+    </div>
     <script src="src/finalproject.js"></script>
   </body>
 </html>

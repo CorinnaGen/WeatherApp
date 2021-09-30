@@ -1,41 +1,42 @@
-.body{
+body{
   display:flex;
-}
-
-.weather-app{ max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 2px solid #16697a;
-  border-radius: 5px;
   background-image: linear-gradient( #082032, #334756);
-
-}
-
-h1,
-ul,
-span,
-h2,
-p,
-h3,
-div,
-form {
+  background-repeat: repeat;
   font-family: "Varela Round", sans-serif;
-  position: relative;
+}
+.search-form{
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
 }
 
-h1 {
+.today-weather{
+  display:flex;
+  flex-direction: row wrap;
+  margin: 20px 20px;
+  justify-content: flex-start;
+}
+.current-weather{
+  display: flex;
+  flex-direction: row wrap;
+  justify-content:flex-start;
+}
+
+#heading{
+  display: flex;
   color: #16697a;
   text-align: left;
-  margin: auto 0;
-  padding-top: 40px;
+  font-size: 70px;
+}
+
+#description{
+  display: flex;
+  text-align: right;
 }
 
 span {
   text-transform: capitalize;
   color: #16697a;
-  text-align: left;
-  margin: auto 0;
-  font-size: 20px;
 }
 
 ul {
@@ -48,10 +49,6 @@ li {
 }
 h2 {
   color: #db6400;
-  text-align: left;
-  margin: auto 0;
-  top: 10px;
-  bottom: 20px;
   font-size: 15px;
 }
 p {
@@ -120,4 +117,13 @@ background-color:#334756 ;
 .current:hover{
   background-color: #db6400;
   color:#334756;
+}
+
+a{
+  color:white;
+  font-size: 10px;
+}
+
+a:hover{
+  color:#db6400;
 }
