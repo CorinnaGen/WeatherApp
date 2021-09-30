@@ -37,7 +37,15 @@ if (minutes <10){
   return `${hours}:${minutes}`
 
 }
-function formatDay(){}
+function formatDay(timestamp){
+  let date = new Date(timestamp *1000);
+  let day = date.getDay();
+  let week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fry', 'Sat', 'Sun'];
+  
+  return week[day];
+ 
+
+}
 
 
 
@@ -69,14 +77,17 @@ function displayForecast(response){
 function displayWeeklyForecast(response){
   console.log(response.data.daily);
 let weeklyForecastElement = document.querySelector("#weekly-forecast");
-   weeklyForecastElement.innerHTML= "";
+   weeklyForecastElement.innerHTML= null;
 let weeklyForecast = response.data.daily;
- weeklyForecast.forEach(day =>{
-  weeklyForecastElement.innerHTML += `<div class="col-3>
-${formatDay(day.dt * 1000)}h
+
+ weeklyForecast.forEach((val, i )=>{
+   if (i < 4){
+  weeklyForecastElement.innerHTML += `<div class="col-3">
+<span><h5>${formatDay(val.dt)}</h5></span>
 <br/>
-<img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" />
-<strong>${Math.round(day.temp.max)}</strong>º|| º${Math.round(day.temp.min)} </div>`});
+<img src="http://openweathermap.org/img/wn/${val.weather[0].icon}@2x.png" />
+<div>
+<strong>${Math.round(val.temp.max)}</strong>º|| º${Math.round(val.temp.min)}</div></div>`}});
  }
 
 function searchCity(city) {
@@ -110,8 +121,8 @@ function showTemperature(response) {
   function getForecast(coordinates){
   let units = "metric";
   let apiKey = "94128e0a800f0999e0bbd83894a5cfd3";
-  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unis=${units}`;
-  axios.get(apiUrl).then(displayWeeklyForecast)
+  apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayWeeklyForecast);
 }
 
 function currentLocation(event) {
